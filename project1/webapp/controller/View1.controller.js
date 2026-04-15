@@ -30,6 +30,7 @@ sap.ui.define([
                         email: "john.doe@example.com",
                         phone: "+1-555-0100",
                         department: "Sales",
+                        role: "Sales Manager",
                         status: "Active"
                     },
                     {
@@ -38,6 +39,7 @@ sap.ui.define([
                         email: "jane.smith@example.com",
                         phone: "+1-555-0101",
                         department: "Marketing",
+                        role: "Marketing Specialist",
                         status: "Active"
                     },
                     {
@@ -46,6 +48,7 @@ sap.ui.define([
                         email: "bob.johnson@example.com",
                         phone: "+1-555-0102",
                         department: "IT",
+                        role: "Developer",
                         status: "Pending"
                     },
                     {
@@ -54,6 +57,7 @@ sap.ui.define([
                         email: "alice.williams@example.com",
                         phone: "+1-555-0103",
                         department: "HR",
+                        role: "HR Director",
                         status: "Active"
                     },
                     {
@@ -62,6 +66,7 @@ sap.ui.define([
                         email: "charlie.brown@example.com",
                         phone: "+1-555-0104",
                         department: "Finance",
+                        role: "Accountant",
                         status: "Inactive"
                     }
                 ]
