@@ -1,6 +1,7 @@
 <mvc:View controllerName="com.asint.rebase.merge.project1.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
+    xmlns:core="sap.ui.core"
     xmlns:f="sap.ui.layout.form">
     <Page id="page" title="{i18n>title}">
         <content>
@@ -90,6 +91,18 @@
                     
                     <Label text="{i18n>address}" />
                     <TextArea id="addressInput" value="" rows="3" placeholder="{i18n>addressPlaceholder}" />
+                    
+                    <Label text="{i18n>department}" />
+                    <Select id="departmentSelect" selectedKey="">
+                        <items>
+                            <core:Item key="" text="{i18n>selectDepartment}" />
+                            <core:Item key="Sales" text="Sales" />
+                            <core:Item key="Marketing" text="Marketing" />
+                            <core:Item key="IT" text="IT" />
+                            <core:Item key="HR" text="HR" />
+                            <core:Item key="Finance" text="Finance" />
+                        </items>
+                    </Select>
                     
                     <Button text="{i18n>submitButton}" type="Emphasized" press=".onSubmit" />
                     <Button text="{i18n>cancelButton}" press=".onCancel" />
