@@ -21,8 +21,11 @@
                     </OverflowToolbar>
                 </headerToolbar>
                 <columns>
-                    <Column width="12em">
-                        <Text text="{i18n>columnName}" />
+                    <Column width="10em">
+                        <Text text="{i18n>columnFirstName}" />
+                    </Column>
+                    <Column width="10em">
+                        <Text text="{i18n>columnLastName}" />
                     </Column>
                     <Column width="12em" demandPopin="true" minScreenWidth="Tablet">
                         <Text text="{i18n>columnEmail}" />
@@ -43,7 +46,8 @@
                 <items>
                     <ColumnListItem>
                         <cells>
-                            <ObjectIdentifier title="{name}" />
+                            <Text text="{firstName}" />
+                            <Text text="{lastName}" />
                             <Text text="{email}" />
                             <Text text="{phone}" />
                             <Text text="{department}" />
