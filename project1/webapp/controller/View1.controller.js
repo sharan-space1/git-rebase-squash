@@ -26,42 +26,52 @@ sap.ui.define([
                 users: [
                     {
                         id: 1,
-                        name: "John Doe",
+                        firstName: "John",
+                        lastName: "Doe",
                         email: "john.doe@example.com",
                         phone: "+1-555-0100",
                         department: "Sales",
+                        role: "Sales Manager",
                         status: "Active"
                     },
                     {
                         id: 2,
-                        name: "Jane Smith",
+                        firstName: "Jane",
+                        lastName: "Smith",
                         email: "jane.smith@example.com",
                         phone: "+1-555-0101",
                         department: "Marketing",
+                        role: "Marketing Specialist",
                         status: "Active"
                     },
                     {
                         id: 3,
-                        name: "Bob Johnson",
+                        firstName: "Bob",
+                        lastName: "Johnson",
                         email: "bob.johnson@example.com",
                         phone: "+1-555-0102",
                         department: "IT",
+                        role: "Developer",
                         status: "Pending"
                     },
                     {
                         id: 4,
-                        name: "Alice Williams",
+                        firstName: "Alice",
+                        lastName: "Williams",
                         email: "alice.williams@example.com",
                         phone: "+1-555-0103",
                         department: "HR",
+                        role: "HR Director",
                         status: "Active"
                     },
                     {
                         id: 5,
-                        name: "Charlie Brown",
+                        firstName: "Charlie",
+                        lastName: "Brown",
                         email: "charlie.brown@example.com",
                         phone: "+1-555-0104",
                         department: "Finance",
+                        role: "Accountant",
                         status: "Inactive"
                     }
                 ]
@@ -105,8 +115,9 @@ sap.ui.define([
             const sEmail = oView.byId("emailInput").getValue();
             const sPhone = oView.byId("phoneInput").getValue();
             const sAddress = oView.byId("addressInput").getValue();
+            const sDepartment = oView.byId("departmentSelect").getSelectedKey();
 
-            MessageToast.show(`Form submitted:\nName: ${sFirstName} ${sLastName}\nEmail: ${sEmail}\nPhone: ${sPhone}\nAddress: ${sAddress}`);
+            MessageToast.show(`Form submitted:\nName: ${sFirstName} ${sLastName}\nEmail: ${sEmail}\nPhone: ${sPhone}\nAddress: ${sAddress}\nDepartment: ${sDepartment}`);
         },
 
         onCancel() {
@@ -116,6 +127,7 @@ sap.ui.define([
             oView.byId("emailInput").setValue("");
             oView.byId("phoneInput").setValue("");
             oView.byId("addressInput").setValue("");
+            oView.byId("departmentSelect").setSelectedKey("");
             
             MessageToast.show("Form cleared");
         }
