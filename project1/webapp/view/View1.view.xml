@@ -20,6 +20,8 @@
                         <Button icon="sap-icon://edit" text="{i18n>editButton}" press=".onEdit" />
                         <Button icon="sap-icon://refresh" text="{i18n>refreshButton}" press=".onRefresh" />
                         <Button icon="sap-icon://delete" text="{i18n>deleteButton}" press=".onDelete" />
+                        <Button icon="sap-icon://edit" text="{i18n>editButton}" press=".onEdit" />
+                        <Button icon="sap-icon://excel-attachment" text="{i18n>exportButton}" press=".onExport" />
                     </OverflowToolbar>
                 </headerToolbar>
                 <columns>
