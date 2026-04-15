@@ -32,6 +32,9 @@
                     <Column width="10em" demandPopin="true" minScreenWidth="Desktop">
                         <Text text="{i18n>columnDepartment}" />
                     </Column>
+                    <Column width="10em" demandPopin="true" minScreenWidth="Desktop">
+                        <Text text="{i18n>columnRole}" />
+                    </Column>
                     <Column width="8em" demandPopin="true" minScreenWidth="Desktop" hAlign="Center">
                         <Text text="{i18n>columnStatus}" />
                     </Column>
@@ -43,6 +46,7 @@
                             <Text text="{email}" />
                             <Text text="{phone}" />
                             <Text text="{department}" />
+                            <Text text="{role}" />
                             <ObjectStatus
                                 text="{status}"
                                 state="{
