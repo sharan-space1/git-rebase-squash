@@ -1,6 +1,7 @@
 <mvc:View controllerName="com.asint.rebase.merge.project1.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
     <Page id="page" title="{i18n>title}">
         <content>
             <Table
@@ -52,6 +53,44 @@
                     </ColumnListItem>
                 </items>
             </Table>
+            <f:SimpleForm
+                id="userForm"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                title="{i18n>formTitle}"
+                labelSpanXL="3"
+                labelSpanL="3"
+                labelSpanM="3"
+                labelSpanS="12"
+                adjustLabelSpan="false"
+                emptySpanXL="4"
+                emptySpanL="4"
+                emptySpanM="4"
+                emptySpanS="0"
+                columnsXL="1"
+                columnsL="1"
+                columnsM="1"
+                singleContainerFullSize="false">
+                <f:content>
+                    <Label text="{i18n>firstName}" />
+                    <Input id="firstNameInput" value="" placeholder="{i18n>firstNamePlaceholder}" />
+                    
+                    <Label text="{i18n>lastName}" />
+                    <Input id="lastNameInput" value="" placeholder="{i18n>lastNamePlaceholder}" />
+                    
+                    <Label text="{i18n>email}" />
+                    <Input id="emailInput" value="" type="Email" placeholder="{i18n>emailPlaceholder}" />
+                    
+                    <Label text="{i18n>phone}" />
+                    <Input id="phoneInput" value="" type="Tel" placeholder="{i18n>phonePlaceholder}" />
+                    
+                    <Label text="{i18n>address}" />
+                    <TextArea id="addressInput" value="" rows="3" placeholder="{i18n>addressPlaceholder}" />
+                    
+                    <Button text="{i18n>submitButton}" type="Emphasized" press=".onSubmit" />
+                    <Button text="{i18n>cancelButton}" press=".onCancel" />
+                </f:content>
+            </f:SimpleForm>
         </content>
     </Page>
 </mvc:View>
