@@ -96,6 +96,28 @@ sap.ui.define([
             oModel.setProperty("/users", aUsers);
             oTable.removeSelections();
             MessageToast.show(`${aSelectedItems.length} item(s) deleted`);
+        },
+
+        onSubmit() {
+            const oView = this.getView();
+            const sFirstName = oView.byId("firstNameInput").getValue();
+            const sLastName = oView.byId("lastNameInput").getValue();
+            const sEmail = oView.byId("emailInput").getValue();
+            const sPhone = oView.byId("phoneInput").getValue();
+            const sAddress = oView.byId("addressInput").getValue();
+
+            MessageToast.show(`Form submitted:\nName: ${sFirstName} ${sLastName}\nEmail: ${sEmail}\nPhone: ${sPhone}\nAddress: ${sAddress}`);
+        },
+
+        onCancel() {
+            const oView = this.getView();
+            oView.byId("firstNameInput").setValue("");
+            oView.byId("lastNameInput").setValue("");
+            oView.byId("emailInput").setValue("");
+            oView.byId("phoneInput").setValue("");
+            oView.byId("addressInput").setValue("");
+            
+            MessageToast.show("Form cleared");
         }
     });
 });
