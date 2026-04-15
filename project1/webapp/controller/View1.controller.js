@@ -110,8 +110,9 @@ sap.ui.define([
             const sEmail = oView.byId("emailInput").getValue();
             const sPhone = oView.byId("phoneInput").getValue();
             const sAddress = oView.byId("addressInput").getValue();
+            const sDepartment = oView.byId("departmentSelect").getSelectedKey();
 
-            MessageToast.show(`Form submitted:\nName: ${sFirstName} ${sLastName}\nEmail: ${sEmail}\nPhone: ${sPhone}\nAddress: ${sAddress}`);
+            MessageToast.show(`Form submitted:\nName: ${sFirstName} ${sLastName}\nEmail: ${sEmail}\nPhone: ${sPhone}\nAddress: ${sAddress}\nDepartment: ${sDepartment}`);
         },
 
         onCancel() {
@@ -121,6 +122,7 @@ sap.ui.define([
             oView.byId("emailInput").setValue("");
             oView.byId("phoneInput").setValue("");
             oView.byId("addressInput").setValue("");
+            oView.byId("departmentSelect").setSelectedKey("");
             
             MessageToast.show("Form cleared");
         }
