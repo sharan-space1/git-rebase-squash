@@ -2,5 +2,56 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
+        <content>
+            <Table
+                id="userTable"
+                inset="false"
+                items="{/users}"
+                growing="true"
+                growingThreshold="10"
+                mode="MultiSelect">
+                <headerToolbar>
+                    <OverflowToolbar>
+                        <Title text="{i18n>tableTitle}" level="H2"/>
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://add" text="{i18n>addButton}" press=".onAdd" />
+                        <Button icon="sap-icon://delete" text="{i18n>deleteButton}" press=".onDelete" />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column width="12em">
+                        <Text text="{i18n>columnName}" />
+                    </Column>
+                    <Column width="12em" demandPopin="true" minScreenWidth="Tablet">
+                        <Text text="{i18n>columnEmail}" />
+                    </Column>
+                    <Column width="10em" demandPopin="true" minScreenWidth="Tablet">
+                        <Text text="{i18n>columnPhone}" />
+                    </Column>
+                    <Column width="10em" demandPopin="true" minScreenWidth="Desktop">
+                        <Text text="{i18n>columnDepartment}" />
+                    </Column>
+                    <Column width="8em" demandPopin="true" minScreenWidth="Desktop" hAlign="Center">
+                        <Text text="{i18n>columnStatus}" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <ObjectIdentifier title="{name}" />
+                            <Text text="{email}" />
+                            <Text text="{phone}" />
+                            <Text text="{department}" />
+                            <ObjectStatus
+                                text="{status}"
+                                state="{
+                                    path: 'status',
+                                    formatter: '.formatter.formatStatusState'
+                                }" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
     </Page>
 </mvc:View>
