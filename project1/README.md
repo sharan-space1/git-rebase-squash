@@ -35,3 +35,4 @@ An SAP Fiori application.
 
 v16.0
 
+v17.0
