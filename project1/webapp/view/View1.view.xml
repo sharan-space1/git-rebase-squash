@@ -104,7 +104,7 @@
                             <core:Item key="Marketing" text="Marketing" />
                             <core:Item key="IT" text="IT" />
                             <core:Item key="HR" text="HRs" />
-                            <core:Item key="Finance" text="Finance" />
+                            <core:Item key="Finance" text="Finances" />
                         </items>
                     </Select>
                     
