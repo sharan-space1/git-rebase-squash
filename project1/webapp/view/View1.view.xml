@@ -3,6 +3,7 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
     xmlns:f="sap.ui.layout.form">
+    <Text text="{i18n>welcomeMessage}" class="sapUiSmallMarginBottom" />
     <Page id="page" title="{i18n>pageTitle}">
         <content>
             <Table
