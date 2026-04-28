@@ -36,3 +36,5 @@ An SAP Fiori application.
 v16.0
 
 v17.0
+
+V18.0
